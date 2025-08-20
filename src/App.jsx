@@ -1,78 +1,153 @@
 // src/App.jsx
+import { motion } from "framer-motion";
 import Catalog from "./components/Catalog";
+import './App.css';
 
 export default function App() {
   return (
-    <div className="bg-white text-black min-h-screen font-sans">
-      {/* HEADER / NAVBAR */}
-      <header className="flex justify-between items-center p-4 border-b border-black">
-        <h1 className="text-xl tracking-tight">MY PORTFOLIO</h1>
-        <nav className="space-x-4 text-sm uppercase">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    
+    <div className="portfolio-app bg-white text-black min-h-screen font-sans">
+      {/* HEADER - Fixed at top */}
+      <header className="fixed top-0 w-full p-4 md:p-6 bg-white z-50 border-b border-black">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <h1 className="text-xl md:text-2xl tracking-tight font-light">MY PORTFOLIO</h1>
+          <nav className="flex space-x-4 md:space-x-6 text-sm uppercase tracking-widest">
+            {["projects", "about", "contact"].map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item}`}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="cursor-pointer hover:opacity-70 transition-opacity"
+              >
+                {item}
+              </motion.a>
+            ))}
+          </nav>
+        </div>
       </header>
 
       {/* HERO SECTION */}
-      <section className="text-center py-20">
-        <h2 className="text-4xl md:text-6xl font-light tracking-tight">
-          Minimal. Clean. Bold.
-        </h2>
-        <p className="mt-4 text-sm uppercase tracking-widest">
-          Welcome to my work
-        </p>
-      </section>
-
-      {/* PROJECT CATALOG */}
-      <section id="projects" className="px-4 md:px-8 py-16 border-t border-black">
-        <h2 className="text-2xl uppercase text-center mb-12">Projects</h2>
-        <Catalog />
-      </section>
-
-      {/* ABOUT SECTION */}
-      <section id="about" className="px-4 md:px-8 py-16 border-t border-black text-center max-w-3xl mx-auto">
-        <h2 className="text-2xl uppercase mb-6">About Me</h2>
-        <p className="text-sm leading-relaxed">
-          I am a developer passionate about creating clean, functional, and minimal
-          applications. My work spans C++, JavaScript, and React projects. I enjoy
-          turning ideas into simple and usable products.
-        </p>
-      </section>
-
-      {/* CONTACT / SOCIAL LINKS */}
-      <section id="contact" className="px-4 md:px-8 py-16 border-t border-black text-center">
-        <h2 className="text-2xl uppercase mb-6">Get in Touch</h2>
-        <p className="text-sm mb-8">Find me on:</p>
-        <div className="flex justify-center gap-6 text-sm uppercase flex-wrap">
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-black px-4 py-2 hover:bg-black hover:text-white transition"
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="pt-32 pb-20 md:pt-40 md:pb-28 text-center"
+      >
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
+            className="text-4xl md:text-6xl font-light tracking-tight mb-4"
           >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-black px-4 py-2 hover:bg-black hover:text-white transition"
+            Hi, I’m Alvin, a BSIT student.
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 1 }}
+            className="text-sm uppercase tracking-widest text-gray-600"
           >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:youremail@example.com"
-            className="border border-black px-4 py-2 hover:bg-black hover:text-white transition"
+            JavaScript, React, HTML, CSS, Java, Python, and C++
+          </motion.p>
+        </div>
+      </motion.section>
+
+      {/* PROJECTS SECTION */}
+      <section id="projects" className="py-16 md:py-24 border-t border-black">
+        <div className="max-w-5xl mx-auto px-4">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            className="text-2xl md:text-3xl font-light text-center mb-12 md:mb-16"
           >
-            Email
-          </a>
+            Selected Projects
+          </motion.h3>
+          <Catalog />
         </div>
       </section>
 
+      {/* ABOUT SECTION */}
+      <section id="about" className="py-16 md:py-24 border-t border-black">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            className="text-2xl md:text-3xl font-light mb-6"
+          >
+            About Me
+          </motion.h3>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-sm md:text-base leading-relaxed text-gray-700"
+          >
+            I'm a passionate developer working on coding projects, always learning
+            and building new things. My focus is on creating clean, efficient solutions
+            with attention to detail and user experience.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section id="contact" className="py-16 md:py-24 border-t border-black">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            className="text-2xl md:text-3xl font-light mb-8"
+          >
+            Get in Touch
+          </motion.h3>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="flex justify-center space-x-8 md:space-x-10"
+          >
+            <motion.a
+              href="https://github.com/yourgithub"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-sm md:text-base uppercase tracking-wide border-b border-black pb-1 hover:opacity-70 transition-opacity"
+            >
+              GitHub
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/yourlinkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-sm md:text-base uppercase tracking-wide border-b border-black pb-1 hover:opacity-70 transition-opacity"
+            >
+              LinkedIn
+            </motion.a>
+          </motion.div>
+        </div>
+      </section>
       {/* FOOTER */}
-      <footer className="p-6 text-xs uppercase text-center border-t border-black">
-        © {new Date().getFullYear()} My Name — All Rights Reserved
+      <footer className="py-6 text-xs uppercase text-center border-t border-black">
+        <div className="max-w-6xl mx-auto">
+          © {new Date().getFullYear()} My Portfolio — All Rights Reserved
+          <div className="bg-red-500 text-white p-4">
+            If this is red, Tailwind is working
+          </div>
+            
+        </div>
       </footer>
     </div>
   );
