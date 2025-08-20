@@ -8,9 +8,9 @@ export default function App() {
     
     <div className="portfolio-app bg-white text-black min-h-screen font-regular">
       {/* HEADER - Fixed at top */}
-      <header className="fixed top-0 w-full p-4 md:p-6 bg-white z-50 border-b border-black">
+      <header className="fixed top-0 w-full p-4 md:p-6 bg-white">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-xl md:text-2xl tracking-tight font-light">MY PORTFOLIO</h1>
+          <h1 className="flex space-x-4 md:space-x-6 text-sm uppercase tracking-widest">MY PORTFOLIO</h1>
           <nav className="flex space-x-4 md:space-x-6 text-sm uppercase tracking-widest">
             {["projects", "about", "contact"].map((item) => (
               <motion.a
@@ -56,7 +56,7 @@ export default function App() {
       </motion.section>
 
       {/* PROJECTS SECTION */}
-      <section id="projects" className="py-16 md:py-24 border-t border-black">
+      <section id="projects" className="py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function App() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-16 md:py-24 border-t border-black">
+      <section id="about" className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function App() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="py-16 md:py-24 border-t border-black">
+      <section id="contact" className="py-16 md:py-24 ">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -117,22 +117,22 @@ export default function App() {
             className="flex justify-center space-x-8 md:space-x-10"
           >
             <motion.a
-              href="https://github.com/yourgithub"
+              href="https://github.com/seulgigigi"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="text-sm md:text-base uppercase tracking-wide border-b border-black pb-1 hover:opacity-70 transition-opacity"
+              className="text-sm md:text-base uppercase tracking-wide pb-1 hover:opacity-70 transition-opacity"
             >
               GitHub
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/yourlinkedin"
+              href="https://www.linkedin.com/in/alvin-jan-undefined-751354374/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="text-sm md:text-base uppercase tracking-wide border-b border-black pb-1 hover:opacity-70 transition-opacity"
+              className="text-sm md:text-base uppercase tracking-wide  pb-1 hover:opacity-70 transition-opacity"
             >
               LinkedIn
             </motion.a>
@@ -140,7 +140,7 @@ export default function App() {
         </div>
       </section>
       {/* FOOTER */}
-      <footer className="py-6 text-xs uppercase text-center border-t border-black">
+      <footer className="py-6 text-xs uppercase text-center">
         <div className="max-w-6xl mx-auto">
           © {new Date().getFullYear()} Alvin Jan L. Calambro
         </div>

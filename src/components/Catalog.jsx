@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 export default function Catalog() {
   const projects = [
     {
-      title: "Pomi",
+      title: "",
       description: "A Pomodoro timer website with a built in to-do list and lofi playlist",
-      image: "https://via.placeholder.com/800x600/000000/FFFFFF?text=TS-01",
+      image: "images/OIG.jpeg",
       link: "https://seulgigigi.github.io/pomi/",
       category: "Website"
     },
     {
-      title: "FiLaro",
+      title: "",
       description: "A Filipino language learning app, gamified to cater to students",
-      image: "https://seulgigigi.github.io/FiLaro/",
-      link: "#",
+      image: "images/filaro192.jpg",
+      link: "https://seulgigigi.github.io/FiLaro/",
       category: "Website"
     },
     {
-      title: "Kyle's Silog Inventory System",
+      title: "",
       description: "An inventory system prototype built in Excel using VBA",
       image: "https://via.placeholder.com/800x600/000000/FFFFFF?text=HD-01",
       link: "#",
