@@ -65,7 +65,7 @@ export default function App() {
             transition={{ duration: 0.7 }}
             className="text-2xl md:text-3xl font-light text-center mb-12 md:mb-16"
           >
-            Selected Projects
+            My Projects
           </motion.h3>
           <Catalog />
         </div>
