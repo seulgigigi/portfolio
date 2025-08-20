@@ -6,7 +6,7 @@ import './App.css';
 export default function App() {
   return (
     
-    <div className="portfolio-app bg-white text-black min-h-screen font-sans">
+    <div className="portfolio-app bg-white text-black min-h-screen font-regular">
       {/* HEADER - Fixed at top */}
       <header className="fixed top-0 w-full p-4 md:p-6 bg-white z-50 border-b border-black">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -142,11 +142,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="py-6 text-xs uppercase text-center border-t border-black">
         <div className="max-w-6xl mx-auto">
-          © {new Date().getFullYear()} My Portfolio — All Rights Reserved
-          <div className="bg-red-500 text-white p-4">
-            If this is red, Tailwind is working
-          </div>
-            
+          © {new Date().getFullYear()} Alvin Jan L. Calambro
         </div>
       </footer>
     </div>

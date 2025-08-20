@@ -4,32 +4,25 @@ import { motion } from "framer-motion";
 export default function Catalog() {
   const projects = [
     {
-      title: "TS-01",
-      description: "Technical solution for modern architecture with a focus on sustainability and innovative design principles.",
+      title: "Pomi",
+      description: "A Pomodoro timer website with a built in to-do list and lofi playlist",
       image: "https://via.placeholder.com/800x600/000000/FFFFFF?text=TS-01",
-      link: "#",
-      category: "Technical Solutions"
+      link: "https://seulgigigi.github.io/pomi/",
+      category: "Website"
     },
     {
-      title: "TS-02",
-      description: "Advanced engineering prototype showcasing cutting-edge technology and precision craftsmanship.",
-      image: "https://via.placeholder.com/800x600/000000/FFFFFF?text=TS-02",
+      title: "FiLaro",
+      description: "A Filipino language learning app, gamified to cater to students",
+      image: "https://seulgigigi.github.io/FiLaro/",
       link: "#",
-      category: "Technical Solutions"
+      category: "Website"
     },
     {
-      title: "HD-01",
-      description: "High-density urban design concept that reimagines city living spaces for future populations.",
+      title: "Kyle's Silog Inventory System",
+      description: "An inventory system prototype built in Excel using VBA",
       image: "https://via.placeholder.com/800x600/000000/FFFFFF?text=HD-01",
       link: "#",
-      category: "Hardware Design"
-    },
-    {
-      title: "SZ NX",
-      description: "Next-generation spatial zoning system that optimizes space utilization in urban environments.",
-      image: "https://via.placeholder.com/800x600/000000/FFFFFF?text=SZ+NX",
-      link: "#",
-      category: "Urban Planning"
+      category: "Inventory"
     }
   ];
 
