@@ -7,21 +7,21 @@ export default function Catalog() {
     {
       title: "",
       description: "A Pomodoro timer website with a built in to-do list and lofi playlist.",
-      image: "/images/OIG.jpeg",
-      link: "https://seulgigigi.github.io/portfolio/public/OIG.jpeg",
+      image: "/OIG.jpeg",
+      link: "https://seulgigigi.github.io/pomi/",
       category: "HTML, CSS, Javascript"
     },
     {
       title: "",
       description: "A Filipino language learning app, gamified to cater to students.",
-      image: "https://seulgigigi.github.io/portfolio/public/filaro512.png",
+      image: "/filaro512.png",
       link: "https://seulgigigi.github.io/FiLaro/",
       category: "HTML, CSS, Javascript"
     },
     {
       title: "",
       description: "An inventory system prototype built in Excel for a small silog business.",
-      image: "https://seulgigigi.github.io/portfolio/public/invent.jpg",
+      image: "/invent.jpg",
       link: "https://docs.google.com/document/d/1_Wc_NlU_itlAlvMNNS28KFwF9AU-gjza/edit?usp=sharing&ouid=105250311011582006818&rtpof=true&sd=true",
       category: "Visual Basic"
     }
